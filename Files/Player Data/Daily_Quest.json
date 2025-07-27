@@ -1,6 +1,6 @@
 {
     "Player": {
-        "Push": 0,
+        "Push": 1,
         "Sit": 0,
         "Squat": 0,
         "Run": 0.0,

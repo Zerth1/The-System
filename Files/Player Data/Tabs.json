@@ -2,7 +2,7 @@
     "Inventory": "Close",
     "Daily": "Close",
     "Quest": "Close",
-    "Skill": "Open",
+    "Skill": "Close",
     "Status": "Close",
     "Equipment": "Close",
     "Shop": "Close",
