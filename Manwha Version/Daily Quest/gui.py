@@ -139,30 +139,29 @@ if full_check==False:
 transp_value=set_data["Settings"]["Transparency"]
 
 window.attributes('-alpha',transp_value)
-    window.overrideredirect(True)
-    window.wm_attributes("-topmost", True)
+window.overrideredirect(True)
+window.wm_attributes("-topmost", True)
 
-    canvas = Canvas(
-        window,
-        bg = "#FFFFFF",
-        height = 721,
-        width = 420,
-        bd = 0,
-        highlightthickness = 0,
-        relief = "ridge"
-    )
+canvas = Canvas(
+    window,
+    bg = "#FFFFFF",
+    height = 721,
+    width = 420,
+    bd = 0,
+    highlightthickness = 0,
+    relief = "ridge"
+)
 
-    canvas.place(x = 0, y = 0)
-    image_image_1 = PhotoImage(
-        file=relative_to_assets("image_1.png"))
-    image_1 = canvas.create_image(
-        847.0,
-        596.0,
-        image=image_image_1
-    )
-
-    with open("Files/Mod/presets.json", 'r') as pres_file:
-        pres_file_data=ujson.load(pres_file)
+canvas.place(x = 0, y = 0)
+image_image_1 = PhotoImage(
+file=relative_to_assets("image_1.png"))
+image_1 = canvas.create_image(
+    847.0,
+    596.0,
+    image=image_image_1
+)
+with open("Files/Mod/presets.json", 'r') as pres_file:
+    pres_file_data=ujson.load(pres_file)
     video_path=pres_file_data["Manwha"]["Video"]
     preloaded_frames=np.load(video_path)
     player = thesystem.system.FastVideoPlayer(canvas, preloaded_frames, 200.0, 350.0, resize_factor=1.5, pause_duration=0.7)
@@ -549,7 +548,7 @@ window.attributes('-alpha',transp_value)
     window.resizable(False, False)
     window.mainloop()
 
-elif full_check==True:
+if full_check==True:
     if rew_check=="True":
         thesystem.system.message_open("Quest Completed")
     else:
